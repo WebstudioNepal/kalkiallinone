@@ -1,50 +1,80 @@
-import Image from "next/image";
-import { ButtonLink } from "@/components/ui/button";
-import { Container } from "@/components/ui/container";
-import { Section } from "@/components/ui/section";
-import { siteConfig } from "@/config/site";
+import { StoreButtons } from "@/components/ui/store-buttons";
+import { heroContent } from "@/config/site";
+import { HeroFeatureBar } from "@/components/sections/hero-feature-bar";
+import { Header } from "@/components/layout/header";
+import { cn } from "@/lib/cn";
+
+/**
+ * Positions derived from Figma frame 1440×1251 (node 624:2790).
+ * Values are percentages so they scale with the hero canvas.
+ */
+const layout = {
+  headline: { top: "18.86%", width: "57.36%" },
+  description: { top: "31.89%", width: "68.68%" },
+  storeButtons: { top: "39.33%", width: "29.58%" },
+  featureBar: { bottom: "-18.5%", width: "90.56%" },
+} as const;
 
 export function Hero() {
   return (
-    <Section id="home" className="pt-12 md:pt-20">
-      <Container>
-        <div className="grid items-center gap-12 lg:grid-cols-2 lg:gap-16">
-          <div className="space-y-8">
-            <div className="space-y-4">
-              <p className="text-sm font-semibold uppercase tracking-widest text-primary">
-                {siteConfig.tagline}
-              </p>
-              <h1 className="font-display text-4xl font-bold leading-tight tracking-tight text-foreground sm:text-5xl lg:text-6xl">
-                Your community, connected in one place
-              </h1>
-              <p className="max-w-lg text-lg leading-relaxed text-muted-foreground">
-                {siteConfig.description}
-              </p>
-            </div>
+    <section id="home" className="relative w-full overflow-visible bg-background">
+      <div
+        className={cn(
+          "relative w-full overflow-visible",
+          "aspect-[1440/1251] min-h-[640px] pb-6 md:pb-10",
+          "bg-[url('/images/hero-bg-img.png')] bg-[length:100%_100%] bg-position-[center_top] bg-no-repeat",
+        )}
+      >
+        <div
+          className="pointer-events-none absolute inset-0 bg-[linear-gradient(180deg,rgba(0,0,0,0.6)_0%,rgba(0,23,106,0)_59.43%)]"
+          aria-hidden
+        />
 
-            <div className="flex flex-col gap-4 sm:flex-row">
-              <ButtonLink href="#download" size="lg">
-                Download App
-              </ButtonLink>
-              <ButtonLink href="#features" variant="outline" size="lg">
-                Learn More
-              </ButtonLink>
-            </div>
+        <Header />
+
+        <div className="pointer-events-none absolute inset-0 z-10">
+          <h1
+            className={cn(
+              "pointer-events-auto absolute left-1/2 -translate-x-1/2 text-center",
+              "font-display text-[clamp(1.75rem,4.3vw,3.875rem)] leading-[1.15] text-white",
+            )}
+            style={{ top: layout.headline.top, width: layout.headline.width }}
+          >
+            {heroContent.headline}
+          </h1>
+
+          <p
+            className={cn(
+              "pointer-events-auto absolute left-1/2 -translate-x-1/2 text-center",
+              "text-[clamp(0.875rem,1.1vw,1rem)] leading-6 text-muted-foreground",
+            )}
+            style={{ top: layout.description.top, width: layout.description.width }}
+          >
+            {heroContent.description}
+          </p>
+
+          <div
+            id="download"
+            className="pointer-events-auto absolute left-1/2 -translate-x-1/2"
+            style={{ top: layout.storeButtons.top, width: layout.storeButtons.width }}
+          >
+            <StoreButtons size="large" className="gap-6" />
           </div>
 
-          <div className="relative mx-auto w-full max-w-md lg:max-w-none">
-            <div className="absolute -inset-4 rounded-3xl bg-primary/10 blur-2xl" aria-hidden />
-            <Image
-              src="/images/hero-placeholder.svg"
-              alt="Kalkisena mobile app preview"
-              width={600}
-              height={500}
-              priority
-              className="relative w-full rounded-2xl"
-            />
+          <div
+            className="pointer-events-auto absolute left-1/2 z-20 -translate-x-1/2"
+            style={{ bottom: layout.featureBar.bottom, width: layout.featureBar.width }}
+          >
+            <HeroFeatureBar />
           </div>
         </div>
-      </Container>
-    </Section>
+      </div>
+
+      <div
+        className="pointer-events-none w-full"
+        style={{ height: "calc(max(640px, 100vw * 1251 / 1440) * 0.185)" }}
+        aria-hidden
+      />
+    </section>
   );
 }

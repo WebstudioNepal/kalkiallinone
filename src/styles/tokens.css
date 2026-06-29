@@ -1,17 +1,19 @@
-/* Design tokens — swap values here when Figma variables are available (node 459:3096) */
+/* Design tokens — Kalkisena Figma (node 624:2790) */
 :root {
-  --primary: #c45c26;
+  --background: #00145d;
+  --hero-deep: #000e3f;
+  --primary: #002ccc;
+  --primary-bright: #002dd0;
   --primary-foreground: #ffffff;
-  --secondary: #1b4332;
-  --secondary-foreground: #f5f0e8;
-  --background: #fffbf7;
-  --foreground: #1a1a1a;
-  --muted: #f3ede6;
-  --muted-foreground: #6b6560;
-  --border: #e8e0d6;
+  --secondary: #00176a;
+  --secondary-foreground: #ffffff;
+  --foreground: #ffffff;
+  --muted: rgba(248, 250, 255, 0.08);
+  --muted-foreground: rgba(255, 255, 255, 0.8);
+  --border: rgba(255, 255, 255, 0.1);
 
-  --radius-sm: 6px;
-  --radius-md: 10px;
+  --radius-sm: 8px;
+  --radius-md: 12px;
   --radius-lg: 16px;
   --radius-xl: 24px;
 }

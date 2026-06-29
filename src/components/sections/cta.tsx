@@ -6,7 +6,7 @@ import { siteConfig } from "@/config/site";
 
 export function Cta() {
   return (
-    <Section id="download" className="bg-secondary py-16 text-secondary-foreground md:py-20">
+    <Section className="bg-secondary py-16 text-secondary-foreground md:py-20">
       <Container>
         <div className="mx-auto max-w-3xl text-center">
           <h2 className="font-display text-3xl font-bold tracking-tight sm:text-4xl">
