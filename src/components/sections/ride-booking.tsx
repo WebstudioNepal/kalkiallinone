@@ -10,14 +10,15 @@ export function RideBooking() {
       id="ride-booking"
       className={cn(
         "relative w-full overflow-hidden bg-background pb-8 pt-4 md:pb-16 md:pt-8",
+        "max-lg:pb-0",
         "backdrop-blur-[100px]",
         "shadow-[inset_0_2px_44.3px_#FFFFFF26,inset_0_4px_5.8px_#00000040]",
       )}
     >
-      <div className="grid items-center gap-10 lg:grid-cols-2 lg:gap-0">
-        <div className="relative order-2 w-full lg:order-1 lg:min-h-[520px]">
-          <div className="relative aspect-[885/748] w-full lg:absolute lg:inset-0 lg:aspect-auto lg:h-full">
-            <div className="absolute top-0 left-1/2 z-0 aspect-[785/360] w-[82%] -translate-x-[calc(50%+20px)] translate-y-8">
+      <div className="grid items-center gap-10 max-lg:gap-6 lg:grid-cols-2 lg:gap-0">
+        <div className="relative order-2 w-full max-lg:-mb-2 lg:order-1 lg:min-h-[520px]">
+          <div className="relative aspect-[885/748] w-full max-lg:aspect-[885/500] lg:absolute lg:inset-0 lg:aspect-auto lg:h-full">
+            <div className="absolute top-0 left-1/2 z-0 aspect-[785/360] w-[82%] -translate-x-[calc(50%+20px)] translate-y-8 max-lg:translate-y-4">
               <Image
                 src="/images/ride-booking/img-bg.png"
                 alt=""
@@ -31,7 +32,7 @@ export function RideBooking() {
               src="/images/ride-booking/ridebookingimg.png"
               alt="Sports car for ride booking"
               fill
-              className="relative z-10 origin-bottom object-contain object-bottom lg:origin-bottom-left lg:scale-[1.15] lg:translate-x-[8px] lg:translate-y-12 lg:object-left-bottom"
+              className="relative z-10 origin-bottom object-contain object-bottom max-lg:translate-y-10 max-lg:scale-[1.15] lg:origin-bottom-left lg:scale-[1.28] lg:translate-x-[8px] lg:translate-y-12 lg:object-left-bottom"
             />
           </div>
         </div>

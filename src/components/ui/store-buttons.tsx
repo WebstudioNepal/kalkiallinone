@@ -19,16 +19,19 @@ function AppleIcon({ className }: { className?: string }) {
 
 type StoreButtonsProps = {
   className?: string;
-  size?: "default" | "large";
+  size?: "xs" | "small" | "default" | "large";
 };
 
 export function StoreButtons({ className, size = "default" }: StoreButtonsProps) {
   const isLarge = size === "large";
+  const isSmall = size === "small";
+  const isXs = size === "xs";
 
   return (
     <div
       className={cn(
-        "flex flex-row items-center justify-center gap-6",
+        "flex flex-row items-center justify-center",
+        isXs ? "gap-1.5" : isSmall ? "gap-3" : "gap-6",
         className,
       )}
     >
@@ -37,19 +40,35 @@ export function StoreButtons({ className, size = "default" }: StoreButtonsProps)
         className={cn(
           "inline-flex items-center gap-2.5 rounded-lg border border-transparent px-4 py-3 text-white shadow-[inset_0_4px_4px_rgba(255,255,255,0.25)] transition-opacity hover:opacity-90",
           "bg-white/16",
-          isLarge ? "min-h-[68px] min-w-[201px] px-6" : "min-h-12",
+          isLarge && "min-h-[68px] min-w-[201px] px-6",
+          isSmall && "min-h-10 min-w-0 flex-1 basis-[calc(50%-0.25rem)] gap-1.5 rounded-md px-2 py-2 sm:px-3",
+          isXs && "min-h-8 min-w-0 flex-1 basis-[calc(50%-0.1875rem)] gap-1 rounded-md px-1.5 py-1.5",
+          !isLarge && !isSmall && !isXs && "min-h-12",
         )}
       >
         <Icon
           icon="logos:google-play-icon"
-          className={cn(isLarge ? "h-11 w-10" : "h-9 w-8 shrink-0")}
+          className={cn(
+            "shrink-0",
+            isLarge ? "h-11 w-10" : isXs ? "h-5 w-[18px]" : isSmall ? "h-7 w-6" : "h-9 w-8",
+          )}
           aria-hidden
         />
         <span className="flex flex-col items-start leading-none">
-          <span className={cn("text-white/90", isLarge ? "text-[10px]" : "text-[10px]")}>
+          <span
+            className={cn(
+              "text-white/90",
+              isXs ? "text-[7px]" : isSmall ? "text-[8px]" : "text-[10px]",
+            )}
+          >
             GET IT ON
           </span>
-          <span className={cn("font-medium", isLarge ? "text-lg" : "text-base")}>
+          <span
+            className={cn(
+              "font-medium",
+              isLarge ? "text-lg" : isXs ? "text-xs" : isSmall ? "text-sm" : "text-base",
+            )}
+          >
             Google Play
           </span>
         </span>
@@ -59,15 +78,33 @@ export function StoreButtons({ className, size = "default" }: StoreButtonsProps)
         href={siteConfig.links.appStore}
         className={cn(
           "inline-flex items-center gap-2.5 rounded-md border border-transparent bg-black px-4 py-3 text-white shadow-[inset_0_5px_10.5px_rgba(255,255,255,0.25)] transition-opacity hover:opacity-90",
-          isLarge ? "min-h-[68px] min-w-[201px] rounded-md px-6" : "min-h-12",
+          isLarge && "min-h-[68px] min-w-[201px] rounded-md px-6",
+          isSmall && "min-h-10 min-w-0 flex-1 basis-[calc(50%-0.25rem)] gap-1.5 rounded-md px-2 py-2 sm:px-3",
+          isXs && "min-h-8 min-w-0 flex-1 basis-[calc(50%-0.1875rem)] gap-1 rounded-md px-1.5 py-1.5",
+          !isLarge && !isSmall && !isXs && "min-h-12",
         )}
       >
-        <AppleIcon className={cn(isLarge ? "h-11 w-11" : "h-9 w-9 shrink-0")} />
+        <AppleIcon
+          className={cn(
+            "shrink-0",
+            isLarge ? "h-11 w-11" : isXs ? "h-5 w-5" : isSmall ? "h-7 w-7" : "h-9 w-9",
+          )}
+        />
         <span className="flex flex-col items-start leading-none">
-          <span className={cn("text-white/90", isLarge ? "text-[10px]" : "text-[10px]")}>
+          <span
+            className={cn(
+              "text-white/90",
+              isXs ? "text-[7px]" : isSmall ? "text-[8px]" : "text-[10px]",
+            )}
+          >
             Download on the
           </span>
-          <span className={cn("font-medium", isLarge ? "text-lg" : "text-base")}>
+          <span
+            className={cn(
+              "font-medium",
+              isLarge ? "text-lg" : isXs ? "text-xs" : isSmall ? "text-sm" : "text-base",
+            )}
+          >
             Apple Store
           </span>
         </span>

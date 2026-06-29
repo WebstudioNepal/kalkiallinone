@@ -60,7 +60,7 @@ export function FoodDelivery() {
 
         <div className="relative w-full lg:min-h-[520px]">
           <div className="relative aspect-[885/748] w-full lg:absolute lg:inset-0 lg:aspect-auto lg:h-full">
-            <div className="absolute bottom-0 left-1/2 z-0   aspect-[785/360] w-[100%] -translate-x-1/2">
+            <div className="absolute bottom-0 left-1/2 z-0 aspect-[785/360] w-[100%] -translate-x-1/2 max-lg:-translate-y-10">
               <Image
                 src="/images/food-delivery/imgbg.png"
                 alt=""
@@ -74,7 +74,7 @@ export function FoodDelivery() {
               src="/images/food-delivery/food-delivery-right-side-img.png"
               alt="Food delivery rider on a scooter"
               fill
-              className="relative z-10 origin-bottom object-contain object-bottom lg:origin-bottom-right lg:scale-[1.25] lg:-translate-x-[8px] lg:translate-y-40 lg:object-right-bottom"
+              className="relative z-10 origin-bottom object-contain object-bottom max-lg:translate-y-10 lg:origin-bottom-right lg:scale-[1.25] lg:-translate-x-[8px] lg:translate-y-40 lg:object-right-bottom"
             />
           </div>
         </div>

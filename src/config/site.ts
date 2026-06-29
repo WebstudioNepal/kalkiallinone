@@ -25,6 +25,20 @@ export const footerLinks = [
   { label: "Support", href: "#contact" },
 ] as const;
 
+export const footerNavLinks = [
+  { label: "Who We Are", href: "#about" },
+  { label: "Features", href: "#features" },
+  { label: "Our Impact", href: "#about" },
+  { label: "Contact Us", href: "#contact" },
+] as const;
+
+export const socialLinks = [
+  { label: "Telegram", href: "#", icon: "mdi:telegram" },
+  { label: "X", href: "#", icon: "ri:twitter-x-fill" },
+  { label: "Instagram", href: "#", icon: "mdi:instagram" },
+  { label: "Facebook", href: "#", icon: "mdi:facebook" },
+] as const;
+
 export const heroContent = {
   headline: "You need ALL-IN-ONE Solution for your Daily life",
   description:
@@ -98,6 +112,76 @@ export const freeCheckupContent = {
   ],
   cta: { label: "Order Now", href: "#download" },
 } as const;
+
+export const ctaContent = {
+  headline: "Economic Revolution to make Nepal A World Leader",
+  description:
+    "Lorem ipsum dolor sit amet consectetur. Tellus volutpat eget purus aliquam erat diam. Nulla sed egestas facilisis ornare quisque neque. Praesent vel sit id netus molestie tincidunt ut. Egestas felis.",
+  rating: "4.3+",
+  bar: {
+    subtitle: "All You Need. In One App.",
+    title: "Download Kalki Sena Drive Today!",
+  },
+} as const;
+
+export const otherFeaturesContent = {
+  title: "Other Features",
+  description:
+    "Lorem ipsum dolor sit amet consectetur. Tellus volutpat eget purus aliquam erat diam. Nulla sed egestas facilisis ornare quisque neque. Praesent vel sit id netus molestie",
+} as const;
+
+export const otherFeatures = [
+  {
+    label: "Buy book get 2 year free clinic (valley only)",
+    icon: "/images/other-feature/majesticons_book-line.png",
+    href: "#download",
+  },
+  {
+    label: "Buy book to sponsor Gen Z (people out of valley)",
+    icon: "/images/other-feature/majesticons_book-line.png",
+    href: "#download",
+  },
+  {
+    label: "Do Online Shopping.",
+    icon: "/images/other-feature/Glyph.png",
+    href: "#download",
+  },
+  {
+    label: "Send money to Nepal from abroad",
+    icon: "/images/other-feature/Vector.png",
+    href: "#download",
+  },
+  {
+    label: "Dosases tracking to stop mega pandemic",
+    icon: "/images/other-feature/Vector.png",
+    href: "#download",
+  },
+  {
+    label: "SOS to stop violence against Women",
+    icon: "/images/other-feature/Group.png",
+    href: "#download",
+  },
+  {
+    label: "Find hostel room apartment for Rent and Sale",
+    icon: "/images/other-feature/Frame.png",
+    href: "#download",
+  },
+  {
+    label: "Find Job or Employee",
+    icon: "/images/other-feature/mask-group.png",
+    href: "#download",
+  },
+  {
+    label: "Rent Car, Bus, Truck, Helicopter, Driver",
+    icon: "/images/other-feature/vector-helicopter.png",
+    href: "#download",
+  },
+  {
+    label: "Buy Health, Car and Bike insurance",
+    icon: "/images/other-feature/streamline-sharp_insurance-hands-solid.png",
+    href: "#download",
+  },
+] as const;
 
 export const features = [
   {
