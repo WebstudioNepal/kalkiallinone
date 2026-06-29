@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 500" fill="none" role="img" aria-labelledby="heroTitle">
+  <title id="heroTitle">Kalkisena app illustration placeholder</title>
+  <rect width="600" height="500" rx="24" fill="#F3EDE6"/>
+  <circle cx="300" cy="220" r="120" fill="#C45C26" fill-opacity="0.15"/>
+  <circle cx="300" cy="220" r="80" fill="#C45C26" fill-opacity="0.25"/>
+  <rect x="220" y="160" width="160" height="280" rx="24" fill="#1B4332"/>
+  <rect x="235" y="175" width="130" height="220" rx="12" fill="#FFFBF7"/>
+  <rect x="255" y="200" width="90" height="12" rx="6" fill="#C45C26" fill-opacity="0.6"/>
+  <rect x="255" y="225" width="70" height="8" rx="4" fill="#E8E0D6"/>
+  <rect x="255" y="245" width="80" height="8" rx="4" fill="#E8E0D6"/>
+  <rect x="255" y="265" width="60" height="8" rx="4" fill="#E8E0D6"/>
+  <rect x="265" y="410" width="70" height="6" rx="3" fill="#6B6560" fill-opacity="0.4"/>
+</svg>

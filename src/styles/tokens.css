@@ -1,0 +1,17 @@
+/* Design tokens — swap values here when Figma variables are available (node 459:3096) */
+:root {
+  --primary: #c45c26;
+  --primary-foreground: #ffffff;
+  --secondary: #1b4332;
+  --secondary-foreground: #f5f0e8;
+  --background: #fffbf7;
+  --foreground: #1a1a1a;
+  --muted: #f3ede6;
+  --muted-foreground: #6b6560;
+  --border: #e8e0d6;
+
+  --radius-sm: 6px;
+  --radius-md: 10px;
+  --radius-lg: 16px;
+  --radius-xl: 24px;
+}
