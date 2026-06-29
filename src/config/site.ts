@@ -73,6 +73,32 @@ export const foodDeliveryContent = {
   cta: { label: "Order Now", href: "#download" },
 } as const;
 
+export const rideBookingContent = {
+  badge: "Ride Booking",
+  headline: "Ride Anytime, Anywhere",
+  description:
+    "Lorem ipsum dolor sit amet consectetur. Tellus volutpat eget purus aliquam erat diam. Nulla sed egestas facilisis ornare quisque neque. Praesent vel sit id netus molestie tincidunt ut. Egestas felis.",
+  bullets: [
+    "Lorem ipsum dolor sit amet consectetur. Tellus volutpat eget purus aliquam erat diam.",
+    "Nulla sed egestas facilisis ornare quisque neque. Praesent vel sit id netus molestie.",
+    "Tincidunt ut egestas felis. Lorem ipsum dolor sit amet consectetur adipiscing elit.",
+  ],
+  cta: { label: "Order Now", href: "#download" },
+} as const;
+
+export const freeCheckupContent = {
+  badge: "Free Clinic Check-up",
+  headline: "Your Health, Our Priority",
+  description:
+    "Lorem ipsum dolor sit amet consectetur. Tellus volutpat eget purus aliquam erat diam. Nulla sed egestas facilisis ornare quisque neque. Praesent vel sit id netus molestie tincidunt ut. Egestas felis.",
+  bullets: [
+    "Lorem ipsum dolor sit amet consectetur. Tellus volutpat eget purus aliquam erat diam.",
+    "Nulla sed egestas facilisis ornare quisque neque. Praesent vel sit id netus molestie.",
+    "Tincidunt ut egestas felis. Lorem ipsum dolor sit amet consectetur adipiscing elit.",
+  ],
+  cta: { label: "Order Now", href: "#download" },
+} as const;
+
 export const features = [
   {
     title: "All-in-One Platform",
