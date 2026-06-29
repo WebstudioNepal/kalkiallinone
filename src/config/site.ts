@@ -28,7 +28,7 @@ export const footerLinks = [
 export const footerNavLinks = [
   { label: "Who We Are", href: "#about" },
   { label: "Features", href: "#features" },
-  { label: "Our Impact", href: "#about" },
+  { label: "Our Impact", href: "#impact" },
   { label: "Contact Us", href: "#contact" },
 ] as const;
 

@@ -29,6 +29,20 @@ body {
   font-family: var(--font-sans), system-ui, sans-serif;
 }
 
+section[id],
+footer[id],
+[id="download"] {
+  scroll-margin-top: 6.5rem;
+}
+
+@media (min-width: 768px) {
+  section[id],
+  footer[id],
+  [id="download"] {
+    scroll-margin-top: 7rem;
+  }
+}
+
 h1,
 h2,
 h3,

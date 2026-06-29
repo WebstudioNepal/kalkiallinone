@@ -13,7 +13,7 @@ export function HeroFeatureBar({ className }: { className?: string }) {
         className,
       )}
     >
-      <h2 className="font-display text-center text-[clamp(1.5rem,3.5vw,3.125rem)] leading-[1.15] text-white md:leading-[57px]">
+      <h2 className="relative z-10 font-display text-center text-[clamp(1.5rem,3.5vw,3.125rem)] leading-[1.15] text-white md:-translate-y-10 md:mb-[-2.5rem] md:leading-[57px]">
         {heroContent.featureBarTitle}
       </h2>
 

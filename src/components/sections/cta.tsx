@@ -8,7 +8,7 @@ import { cn } from "@/lib/cn";
 export function Cta() {
   return (
     <section
-      id="cta"
+      id="about"
       className="relative w-full overflow-hidden bg-background pb-8 pt-4 md:pb-16 md:pt-8"
     >
       <div className="grid items-center gap-10 lg:grid-cols-[2fr_3fr] lg:gap-0">
@@ -45,7 +45,7 @@ export function Cta() {
             <span className="text-base text-white sm:text-lg">({ctaContent.rating})</span>
           </div>
 
-          <StoreButtons size="small" className="justify-start" />
+          <StoreButtons size="large" className="justify-start" />
         </div>
       </div>
 

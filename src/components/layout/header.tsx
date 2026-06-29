@@ -15,9 +15,32 @@ const navBarStyles = cn(
 
 export function Header() {
   const [mobileOpen, setMobileOpen] = useState(false);
+  const [heroNavVisible, setHeroNavVisible] = useState(true);
 
   const closeMenu = useCallback(() => setMobileOpen(false), []);
   const toggleMenu = useCallback(() => setMobileOpen((open) => !open), []);
+
+  useEffect(() => {
+    const foodDelivery = document.getElementById("food-delivery");
+    if (!foodDelivery) return;
+
+    const updateVisibility = () => {
+      const { top } = foodDelivery.getBoundingClientRect();
+      const inHero = top > 24;
+
+      setHeroNavVisible(inHero);
+      if (!inHero) setMobileOpen(false);
+    };
+
+    updateVisibility();
+    window.addEventListener("scroll", updateVisibility, { passive: true });
+    window.addEventListener("resize", updateVisibility);
+
+    return () => {
+      window.removeEventListener("scroll", updateVisibility);
+      window.removeEventListener("resize", updateVisibility);
+    };
+  }, []);
 
   useEffect(() => {
     if (!mobileOpen) return;
@@ -38,9 +61,12 @@ export function Header() {
   return (
     <header
       className={cn(
-        "absolute z-50",
+        "fixed z-50 transition-[transform,opacity,visibility] duration-300 ease-out",
+        heroNavVisible
+          ? "visible translate-y-0 opacity-100"
+          : "invisible -translate-y-[120%] opacity-0 pointer-events-none",
         "max-md:inset-x-3 max-md:top-5 max-md:w-auto",
-        "md:left-1/2 md:w-[90%] md:max-w-[1004px] md:-translate-x-1/2 md:top-[3.28%]",
+        "md:left-1/2 md:w-[90%] md:max-w-[1004px] md:-translate-x-1/2 md:top-5",
         "lg:w-[76%] lg:max-w-[1080px]",
       )}
     >

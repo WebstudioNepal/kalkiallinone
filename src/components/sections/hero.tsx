@@ -1,7 +1,6 @@
 import { StoreButtons } from "@/components/ui/store-buttons";
 import { heroContent } from "@/config/site";
 import { HeroFeatureBar } from "@/components/sections/hero-feature-bar";
-import { Header } from "@/components/layout/header";
 import { cn } from "@/lib/cn";
 
 /**
@@ -27,8 +26,6 @@ export function Hero() {
           className="pointer-events-none absolute inset-0 bg-[linear-gradient(180deg,rgba(0,0,0,0.6)_0%,rgba(0,23,106,0)_59.43%)]"
           aria-hidden
         />
-
-        <Header />
 
         <div
           className={cn(
@@ -80,7 +77,7 @@ export function Hero() {
             className={cn(
               "pointer-events-auto relative z-20 hidden w-full",
               "md:absolute md:left-1/2 md:block md:-translate-x-1/2",
-              "md:bottom-[-18.5%] md:w-[90.56%]",
+              "md:bottom-[-11%] md:w-[90.56%]",
             )}
           >
             <HeroFeatureBar />
@@ -94,7 +91,7 @@ export function Hero() {
 
       <div
         className="pointer-events-none hidden w-full md:block"
-        style={{ height: "calc(max(640px, 100vw * 1251 / 1440) * 0.185)" }}
+        style={{ height: "calc(max(640px, 100vw * 1251 / 1440) * 0.11)" }}
         aria-hidden
       />
     </section>

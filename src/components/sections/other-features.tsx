@@ -44,7 +44,7 @@ function OtherFeatureCard({ label, icon, href }: OtherFeatureCardProps) {
 export function OtherFeatures() {
   return (
     <section
-      id="other-features"
+      id="features"
       className="relative w-full overflow-hidden bg-[linear-gradient(180deg,#00092A_0%,#002DD0_148.74%)] py-[52px] pb-16 md:min-h-[615px]"
     >
       <div className="pointer-events-none absolute inset-0 overflow-hidden" aria-hidden>

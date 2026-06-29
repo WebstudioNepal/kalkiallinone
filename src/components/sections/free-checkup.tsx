@@ -7,7 +7,7 @@ import { cn } from "@/lib/cn";
 export function FreeCheckup() {
   return (
     <section
-      id="free-checkup"
+      id="impact"
       className="relative w-full overflow-hidden bg-background pb-8 pt-4 md:pb-16 md:pt-8"
     >
       <div className="grid items-center gap-10 lg:grid-cols-2 lg:gap-0">
