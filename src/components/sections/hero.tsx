@@ -65,7 +65,12 @@ export function Hero() {
           >
             <StoreButtons
               size="xs"
-              className="w-full md:hidden"
+              className={cn(
+                "grid w-full grid-cols-3 items-center gap-0 md:hidden",
+                "[&>a]:min-w-0 [&>a]:w-full [&>a]:max-w-full [&>a]:flex-none [&>a]:basis-auto",
+                "[&>a:first-child]:col-start-1 [&>a:first-child]:justify-self-start",
+                "[&>a:last-child]:col-start-3 [&>a:last-child]:translate-x-2 [&>a:last-child]:justify-self-end",
+              )}
             />
             <StoreButtons
               size="large"
